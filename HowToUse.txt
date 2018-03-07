@@ -1,0 +1,14 @@
+ffmpeg-test: acquring video frames from 6-way mp4 files
+
+ZhuMianYinShe: panoramic video stitching
+
+StreamPusherDll: encoding and pushing. After compiling, copy StreamPusherDll.lib and StreamPusherDll.dll from folder 'Debug' and paste them into the same directory as main.cpp in folder 'ZhuMianYinShe'
+
+auto_calib: camera calibration
+
+NewAdjust: distortion correction
+
+USBcamera_test: 6-way USB webcam testing (capture video frames and display)
+
+bass_test: Using sound to synchronize the starting and end time of two videos.
+
