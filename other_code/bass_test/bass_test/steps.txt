@@ -1,0 +1,16 @@
+在cmd中使用命令 ffmpeg -i 0-1.mp4 -vn 0-1.mp3 从mp4中分离mp3
+打开ffmpeg-test.sln
+mp42yuv.cpp中修改
+string outputFilePath = "frameTime0-1.txt"为帧时刻&帧间隔txt
+char filepath[] = "0-1.mp4"为要分离为yuv420的mp4
+FILE *fp_yuv = fopen("output0-1.yuv", "wb+")为要生成的yuv420的路径
+将main函数注释掉
+yuv2jpg偏白.cpp中修改
+#define FCount 369为yuv420的帧数 使用YUV Player Deluxe可以查看帧数（这个也可以直接算）
+char *filename = "output0-1.yuv"为要转成jpg的yuv420
+ss << "0-1//"存jpg的文件夹路径（可能要先新建文件夹）
+打开bass_test.sln
+在scan_peak.cpp中修改
+设置double interval = 0.0416667为之前获得的帧间隔
+std::string file_name("0-2.mp3")为要检测波峰的mp3
+string outputFilePath = "scan_peak0-2.txt"为要生成的音量数据和帧下标txt
